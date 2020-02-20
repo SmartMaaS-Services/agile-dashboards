@@ -77,16 +77,30 @@
         return result;
     };
 
-    //Bindea los endpoints para recibir los valores
-    MashupPlatform.wiring.registerCallback("list-A", function (list) {
-        list_A = list;
-        MashupPlatform.wiring.pushEvent("union-list", calculate_union(list_A, list_B));
-    });
-    MashupPlatform.wiring.registerCallback("list-B", function (list) {
-        list_B = list;
-        //Envia la lista calculada
-        MashupPlatform.wiring.pushEvent("union-list", calculate_union(list_A, list_B));
-    });
+    var init = function init () {
+        //Bindea los endpoints para recibir los valores
+        MashupPlatform.wiring.registerCallback("list-A", function (list) {
+            var output = [];
+            list_A = list;
+            output = calculate_union(list_A, list_B);
+
+            if (Array.isArray(output) && output.length) {
+                MashupPlatform.wiring.pushEvent("union-list", output);
+            }
+        });
+        MashupPlatform.wiring.registerCallback("list-B", function (list) {
+            var output = [];
+            list_B = list;
+            //Envia la lista calculada
+            output = calculate_union(list_A, list_B);
+
+            if (Array.isArray(output) && output.length) {
+                MashupPlatform.wiring.pushEvent("union-list", output);
+            }
+        });
+    };
+
+    init();
 
     /* test-code */
     /* exports checkEqual */
