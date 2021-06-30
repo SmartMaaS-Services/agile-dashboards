@@ -1,3 +1,30 @@
+<h2 align="center">
+  <a href="https://smart-maas.eu/en/"><img src="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/blob/main/docs/images/Header.jpeg" alt="Smart MaaS" width="500"></a>
+  <br>
+      SMART MOBILITY SERVICE PLATFORM
+  <br>
+  <a href="https://smart-maas.eu/en/"><img src="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/blob/main/docs/images/Logos-Smart-MaaS.png" alt="Smart MaaS" width="250"></a>
+  <br>
+</h2>
+
+<p align="center">
+  <a href="mailto:info@smart-maas.eu">Contact</a> •
+  <a href="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/issues">Issues</a> •
+  <a href="https://smart-maas.eu/en/">Project Page</a>
+</p>
+
+
+***
+
+<h1 align="center">
+  <a>
+    Agile Dashboards
+  </a>
+</h1>
+
+***
+
+
 This set of Wirecloud components allow the creation and visualization of agile dashboards where you can easily check the progress and status of agile projects using charts and tables to plot the data.
 
 Currently Github, Gitlab, Jira and Jenkins are supported.
